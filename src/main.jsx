@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -7,6 +6,9 @@ import {
 } from "react-router-dom";
 import Main from './Components/Main';
 import Home from './Components/Home';
+import Login from './Components/Login';
+import Register from './Components/Register';
+import ProviderRouter from './Components/ProviderRouter';
 
 const router = createBrowserRouter([
   {
@@ -17,13 +19,20 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>
       },
-     
+     {
+      path:"/login",
+      element:<Login></Login>
+     },
+     {
+      path:"/regi",
+      element:<Register></Register>
+     }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ <ProviderRouter>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+ </ProviderRouter>
 )

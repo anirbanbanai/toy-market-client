@@ -11,9 +11,11 @@ const Header = () => {
                 <Link className='text-2xl mr-3 font-semibold hover:bg-red-400 p-2 rounded-lg' to='/'>All_Toy</Link>
                 <Link className='text-2xl mr-3 font-semibold hover:bg-red-400 p-2 rounded-lg' to='/'>My-Toy</Link>
                 <Link className='text-2xl mr-3 font-semibold hover:bg-red-400 p-2 rounded-lg' to='/'>Add-Toy</Link>
+                <Link className='text-2xl mr-3 font-semibold hover:bg-red-400 p-2 rounded-lg' to='/'>Blogs</Link>
             </div>
             <div>
-                <button className='btn btn-success'>Login</button>
+                <Link className='btn' to='/login'>Login</Link>
+                {/* <button className='btn btn-success'>Login</button> */}
             </div>
         </div>
     );

@@ -1,27 +1,30 @@
-import { useContext,} from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
 
 const Register = () => {
-    // const [user, setUser] = useState('')
-    // const [sucess, setSuccess] = useState('')
+    const [user, setUser] = useState('')
+    const [sucess, setSuccess] = useState('')
     const { createUser } = useContext(AuthContext);
 
     const handleSubmit = event => {
-     event.preventDefault();
-     const form = event.target;
-     const email = form.email.value;
-     const password= form.password.value;
-     console.log({email, password})
-
-     createUser(email,password)
-     .then(result=>{
-        const user = result.user;
-        console.log(user);
-     })
-     .catch(error =>{
-        console.log(error.message)
-     })
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log({ email, password })
+        setSuccess('')
+        setUser('')
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setSuccess("Created Sucsessfully")
+            })
+            .catch(error => {
+                console.log(error.message);
+                setUser(error.message)
+            })
     }
     return (
         <div>
@@ -32,7 +35,7 @@ const Register = () => {
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleSubmit} className="card-body">
+                        <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -47,6 +50,8 @@ const Register = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
+                                <h1 className='text-red-500'>{user}</h1>
+                                <h1 className='text-green-500'>{sucess}</h1>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>

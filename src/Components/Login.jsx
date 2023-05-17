@@ -1,12 +1,13 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     const [user, setUser] = useState('')
     const [sucess, setSuccess] = useState('')
 
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, googleLogin } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -28,11 +29,25 @@ const Login = () => {
             })
     }
 
+    const GoogleLogin = () => {
+        googleLogin()
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error=>{
+            
+                console.log(error.message)
+            }
+        )
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
+                        <button onClick={GoogleLogin} className='btn btn-warning'><FcGoogle className='text-3xl mr-2' /> Sign in with Google</button>
                         <h1 className="text-5xl font-bold">Login now!</h1>
 
                     </div>

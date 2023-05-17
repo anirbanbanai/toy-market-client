@@ -1,8 +1,9 @@
+import BannerSection from "./BannerSection";
 
 const Home = () => {
     return (
         <div>
-            <h5>This is Home</h5>
+            <BannerSection></BannerSection>
         </div>
     );
 };

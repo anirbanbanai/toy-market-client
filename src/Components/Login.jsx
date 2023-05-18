@@ -1,11 +1,18 @@
-import { useContext, useState } from 'react';
+import { useContext, useState,  } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
 import { FcGoogle } from "react-icons/fc";
+import {useNavigate, useLocation} from 'react-router-dom'
 
 const Login = () => {
     const [user, setUser] = useState('')
     const [sucess, setSuccess] = useState('')
+
+    const navigate  = useNavigate();
+    const location = useLocation();
+    console.log(location)
+
+    const from = location.state?.from?.pathname || '/';
 
     const { loginUser, googleLogin } = useContext(AuthContext);
 
@@ -22,6 +29,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 setSuccess('Login Sucsessfully')
+                navigate(from, {replace:true})
             })
             .catch(error => {
                 console.log(error.message);

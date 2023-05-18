@@ -8,8 +8,9 @@ const AddToy = () => {
         const catagory = form.catagory.value;
         const sub_catagory = form.sub_catagory.value;
         const price = form.price.value;
+        const rating = form.rating.value;
         const img = form.photo.value;
-        const all = {name, catagory, sub_catagory, img, price};
+        const all = {name, catagory,rating, sub_catagory, img, price};
         console.log(all)
 
         fetch(`http://localhost:5000/toy`,{

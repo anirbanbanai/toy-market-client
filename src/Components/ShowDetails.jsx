@@ -3,7 +3,7 @@ import {useLoaderData} from  'react-router-dom'
 const ShowDetails = () => {
     const data  = useLoaderData()
     console.log(data)
-    const {category, img, name, price, rating} = data;
+    const {category, img, name,} = data;
     return (
         <div className='bg-pink-300 m-5 text-center'>
             <h1>{category}</h1>

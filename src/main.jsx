@@ -15,6 +15,7 @@ import Error from './Components/Error';
 import Blog from './Components/Blog';
 import ShowDetails from './Components/ShowDetails';
 import MyToy from './Components/MyToy';
+import PrivetRoute from './Components/PrivetRoute';
 
 const router = createBrowserRouter([
   {
@@ -48,12 +49,16 @@ const router = createBrowserRouter([
      },
      {
       path:'/shaw/:id',
-      element:<ShowDetails></ShowDetails>,
+      element:<PrivetRoute>
+        <ShowDetails></ShowDetails>
+      </PrivetRoute>,
       loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
      },
      {
       path:'/mytoy',
-      element:<MyToy></MyToy>,
+      element:<PrivetRoute>
+        <MyToy></MyToy>
+      </PrivetRoute>,
       loader:()=>fetch(`http://localhost:5000/toy`)
      }
     ]

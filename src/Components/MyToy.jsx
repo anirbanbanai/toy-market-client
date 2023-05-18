@@ -7,6 +7,7 @@ const MyToy = () => {
     console.log(data)
     return (
         <div>
+            <h3>toy</h3>
         {
             data.map(m=><MySubToy key={m._id} main={m}></MySubToy>)
         }

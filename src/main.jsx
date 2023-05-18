@@ -36,7 +36,7 @@ const router = createBrowserRouter([
      },
      {
       path:"/addtoy",
-      element:<AddToy></AddToy>
+      element:<PrivetRoute><AddToy></AddToy></PrivetRoute>
      },
      {
       path:"/alltoy",
@@ -52,14 +52,14 @@ const router = createBrowserRouter([
       element:<PrivetRoute>
         <ShowDetails></ShowDetails>
       </PrivetRoute>,
-      loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+      loader:({params})=>fetch(`https://assign11-server.vercel.app/toy/${params.id}`)
      },
      {
       path:'/mytoy',
       element:<PrivetRoute>
         <MyToy></MyToy>
       </PrivetRoute>,
-      loader:()=>fetch(`http://localhost:5000/toy`)
+      loader:()=>fetch(`https://assign11-server.vercel.app/toy`)
      }
     ]
   },

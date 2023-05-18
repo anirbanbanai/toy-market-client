@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const GallarySection = () => {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy`)
+        fetch(`https://assign11-server.vercel.app/toy`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -6,7 +6,7 @@ const MySubToy = ({main}) => {
    const handleDelete = (id) =>{
       console.log(id);
 
-      fetch(`http://localhost:5000/toy/${id}`,{
+      fetch(`https://assign11-server.vercel.app/toy/${id}`,{
         method:"DELETE"
       })
       .then(res => res.json())

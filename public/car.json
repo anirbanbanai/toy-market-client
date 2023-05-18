@@ -2,7 +2,7 @@
     {
       "name": "Toy Car 1",
       "category": "Toys",
-      "sub-category": "Polish_Cars",
+      "sub_category": "Polish_Cars",
       "price": 9.99,
       "rating": 4.5,
       "img": "https://m.media-amazon.com/images/I/81Bx9T8G65L.jpg"
@@ -10,7 +10,7 @@
     {
       "name": "Toy Car 2",
       "category": "Toys",
-      "sub-category": "Polish_Cars",
+      "sub_category": "Polish_Cars",
       "price": 12.99,
       "rating": 4.2,
       "img": "https://cdn.shopify.com/s/files/1/0575/5673/0040/products/1_483cb66f-3e30-4f87-81a2-0d947d03c598_700x700.jpg?v=1628045227"
@@ -18,7 +18,7 @@
     {
       "name": "Toy Car 3",
       "category": "Toys",
-      "sub-category": "Polish_Cars",
+      "sub_category": "Polish_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://hip2save.com/wp-content/uploads/2021/11/kid-trax-car.jpg?resize=1024%2C538&strip=all"
@@ -26,7 +26,7 @@
     {
       "name": "Toy Car 4",
       "category": "Toys",
-      "sub-category": "Polish_Cars",
+      "sub_category": "Polish_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://v.w-x.co/KID_COP_1_18657861728_mp4_video_1280x720_2432000_primary_audio_eng_4_1280x720_18659397624.jpg"
@@ -34,7 +34,7 @@
     {
       "name": "Toy Car 5",
       "category": "Toys",
-      "sub-category": "Sports_Cars",
+      "sub_category": "Sports_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://i.ytimg.com/vi/3V3LwOg3VPs/maxresdefault.jpg"
@@ -42,7 +42,7 @@
     {
       "name": "Toy Car 6",
       "category": "Toys",
-      "sub-category": "Sports_Cars",
+      "sub_category": "Sports_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://ae01.alicdn.com/kf/HTB1qWauKFXXXXbtXpXXq6xXFXXX1/1-32-Scale-Alloy-Diecast-Metal-Car-Model-For-Lotus-Exige-S-Collection-Pull-Back-Luxury.jpg_Q90.jpg_.webp"
@@ -50,7 +50,7 @@
     {
       "name": "Toy Car 7",
       "category": "Toys",
-      "sub-category": "Sports_Cars",
+      "sub_category": "Sports_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://isakaabengaluru.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/12/10120707/Hfcc0cf19df2f452ab75e6a4415cde92fJ.jpg_960x960.webp"
@@ -58,7 +58,7 @@
     {
       "name": "Toy Car 8",
       "category": "Toys",
-      "sub-category": "Sports_Cars",
+      "sub_category": "Sports_Cars",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDOH-BABY-BABYOH-B185384BCE3959D/2.jpg"
@@ -66,7 +66,7 @@
     {
       "name": "Toy Car 9",
       "category": "Toys",
-      "sub-category": "Truck",
+      "sub_category": "Truck",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://i.ytimg.com/vi/aueLgSQgcrU/maxresdefault.jpg"
@@ -74,7 +74,7 @@
     {
       "name": "Toy Car 10",
       "category": "Toys",
-      "sub-category": "Truck",
+      "sub_category": "Truck",
       "price": 14.99,
       "rating": 4.7,
       "img": "https://i.ytimg.com/vi/FaMVPaLkqbw/maxresdefault.jpg"
@@ -83,7 +83,7 @@
     {
       "name": "Toy Car 11",
       "category": "Toys",
-      "sub-category": "Truck",
+      "sub_category": "Truck",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://rukminim1.flixcart.com/image/416/416/jmawvbk0/remote-control-toy/4/h/a/fdd-mad-cross-racing-monster-truck-car-for-kids-dmpl-original-imaf4ypzmpgaeyvy.jpeg?q=70"
@@ -91,7 +91,7 @@
     {
       "name": "Toy Car 12",
       "category": "Toys",
-      "sub-category": "Truck",
+      "sub_category": "Truck",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://i.ytimg.com/vi/ObuIDRRV8Tw/maxresdefault.jpg"
@@ -99,7 +99,7 @@
     {
       "name": "Toy Car 13",
       "category": "Toys",
-      "sub-category": "Regular_Cars",
+      "sub_category": "Regular_Cars",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDSTYLE-ZONE-SBABY6609084FDAEB13/1564630255641_0..jpg"
@@ -107,7 +107,7 @@
     {
       "name": "Toy Car 14",
       "category": "Toys",
-      "sub-category": "Regular_Cars",
+      "sub_category": "Regular_Cars",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://static-01.daraz.com.bd/p/0752f94aea9b4ae48eb80b9d7204b832.jpg_720x720.jpg_.webp"
@@ -115,7 +115,7 @@
     {
       "name": "Toy Car 15",
       "category": "Toys",
-      "sub-category": "Regular_Cars",
+      "sub_category": "Regular_Cars",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://shopee.com.my/blog/wp-content/uploads/2021/11/51CA9317-686F-4633-923A-ED63D98508D8.jpeg"
@@ -123,7 +123,7 @@
     {
       "name": "Toy Car 16",
       "category": "Toys",
-      "sub-category": "Regular_Cars",
+      "sub_category": "Regular_Cars",
       "price": 7.99,
       "rating": 4.1,
       "img": "https://www.bmw.in/content/bmw/marketIN/bmw_in/en_IN/topics/owners/bmw-lifestyle/bmw-kids-2019/jcr:content/par/mosaicgallery/items/mosaicgalleryitem_813684320/image.transform/mosaic685/image.1594034777250.jpg"

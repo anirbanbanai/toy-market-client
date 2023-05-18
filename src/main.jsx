@@ -12,6 +12,9 @@ import ProviderRouter from './Components/ProviderRouter';
 import AddToy from './Components/AddToy';
 import AllToy from './Components/AllToy';
 import Error from './Components/Error';
+import Blog from './Components/Blog';
+import ShowDetails from './Components/ShowDetails';
+import MyToy from './Components/MyToy';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +40,21 @@ const router = createBrowserRouter([
      {
       path:"/alltoy",
       element:<AllToy></AllToy>,
-      loader:()=>fetch(`https://assign11-server.vercel.app/toy`)
+      loader:()=>fetch(`http://localhost:5000/toy`)
+     },
+     {
+      path:"/blog",
+      element:<Blog></Blog>
+     },
+     {
+      path:'/shaw/:id',
+      element:<ShowDetails></ShowDetails>,
+      loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+     },
+     {
+      path:'/mytoy',
+      element:<MyToy></MyToy>,
+      loader:()=>fetch(`http://localhost:5000/toy`)
      }
     ]
   },

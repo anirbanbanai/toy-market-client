@@ -9,6 +9,7 @@ import Home from './Components/Home';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import ProviderRouter from './Components/ProviderRouter';
+import AddToy from './Components/AddToy';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
      {
       path:"/regi",
       element:<Register></Register>
+     },
+     {
+      path:"/addtoy",
+      element:<AddToy></AddToy>
      }
     ]
   },

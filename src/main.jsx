@@ -16,61 +16,67 @@ import Blog from './Components/Blog';
 import ShowDetails from './Components/ShowDetails';
 import MyToy from './Components/MyToy';
 import PrivetRoute from './Components/PrivetRoute';
+import Update from './Components/Update';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
-     {
-      path:"/login",
-      element:<Login></Login>
-     },
-     {
-      path:"/regi",
-      element:<Register></Register>
-     },
-     {
-      path:"/addtoy",
-      element:<PrivetRoute><AddToy></AddToy></PrivetRoute>
-     },
-     {
-      path:"/alltoy",
-      element:<AllToy></AllToy>,
-      loader:()=>fetch(`http://localhost:5000/toy`)
-     },
-     {
-      path:"/blog",
-      element:<Blog></Blog>
-     },
-     {
-      path:'/shaw/:id',
-      element:<PrivetRoute>
-        <ShowDetails></ShowDetails>
-      </PrivetRoute>,
-      loader:({params})=>fetch(`https://assign11-server.vercel.app/toy/${params.id}`)
-     },
-     {
-      path:'/mytoy',
-      element:<PrivetRoute>
-        <MyToy></MyToy>
-      </PrivetRoute>,
-      loader:()=>fetch(`https://assign11-server.vercel.app/toy`)
-     }
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/regi",
+        element: <Register></Register>
+      },
+      {
+        path: "/addtoy",
+        element: <PrivetRoute><AddToy></AddToy></PrivetRoute>
+      },
+      {
+        path: "/alltoy",
+        element: <AllToy></AllToy>,
+        loader: () => fetch(`https://assign11-server.vercel.app/toy`)
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      },
+      {
+        path: '/shaw/:id',
+        element: <PrivetRoute>
+          <ShowDetails></ShowDetails>
+        </PrivetRoute>,
+        loader: ({ params }) => fetch(`https://assign11-server.vercel.app/toy/${params.id}`)
+      },
+      {
+        path: '/mytoy',
+        element: <PrivetRoute>
+          <MyToy></MyToy>
+        </PrivetRoute>,
+        loader: () => fetch(`https://assign11-server.vercel.app/toy`)
+      },
+      {
+        path:"/update/:id",
+        element:<Update></Update>,
+        loader:()=>fetch()
+      }
     ]
   },
   {
-    path:"*",
-    element:<Error></Error>
+    path: "*",
+    element: <Error></Error>
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- <ProviderRouter>
+  <ProviderRouter>
     <RouterProvider router={router} />
- </ProviderRouter>
+  </ProviderRouter>
 )

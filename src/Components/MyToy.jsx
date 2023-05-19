@@ -1,16 +1,23 @@
-import {useLoaderData} from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import MySubToy from './MySubToy';
+import { useState } from 'react';
 
 
 const MyToy = () => {
-    const data = useLoaderData();
-    console.log(data)
+    const loaddata = useLoaderData();
+    const [datas, setData] = useState(loaddata)
+    // console.log(data)
     return (
         <div>
-           
-        {
-            data.map(m=><MySubToy key={m._id} main={m}></MySubToy>)
-        }
+
+            {
+                datas.map(m => <MySubToy
+                    setData={setData}
+                    datas={datas}
+                    key={m._id}
+                    main={m}
+                ></MySubToy>)
+            }
         </div>
     );
 };

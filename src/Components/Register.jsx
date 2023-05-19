@@ -2,11 +2,13 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
 import { FcGoogle } from "react-icons/fc";
+import { useTitle } from '../Hooks/useTitle';
 
 const Register = () => {
     const [user, setUser] = useState('')
     const [sucess, setSuccess] = useState('')
     const { createUser, googleLogin } = useContext(AuthContext);
+    useTitle('register')
 
     const handleSubmit = event => {
         event.preventDefault();

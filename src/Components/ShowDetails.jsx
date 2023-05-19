@@ -1,8 +1,10 @@
 import { useLoaderData } from 'react-router-dom'
 import { BsStarFill } from "react-icons/bs";
+import { useTitle } from '../Hooks/useTitle';
 
 
 const ShowDetails = () => {
+    useTitle("Details")
     const data = useLoaderData()
     console.log(data)
     const { img, name, price, rating, available_quantity } = data;

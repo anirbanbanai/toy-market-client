@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import {Link} from 'react-router-dom'
 
 const MySubToy = ({main, setData, datas}) => {
-    const {_id, category, img, price, rating,  } = main;
+    const {_id, name, img, price, rating,  } = main;
    const handleDelete = (id) =>{
     Swal.fire({
         title: 'Are you sure?',
@@ -44,7 +44,7 @@ const MySubToy = ({main, setData, datas}) => {
         <div>
             <div className="flex justify-between items-center border-2 m-2">
             <img className="w-[100px]" src={img} alt="" />
-            <h1 className="font-semibold">{category}</h1>
+            <h1 className="font-semibold">{name}</h1>
             <h1>Price :  ${price}</h1>
             
             <h1 className="flex gap-1 items-center"><BsStarFill className="text-yellow-400"/> <BsStarFill className="text-yellow-400"/><BsStarFill className="text-yellow-400"/><BsStarFill className="text-yellow-400"/> {rating}</h1>

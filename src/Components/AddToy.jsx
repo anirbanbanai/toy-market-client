@@ -1,8 +1,10 @@
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
+import { useTitle } from '../Hooks/useTitle';
 
 const AddToy = () => {
+    useTitle("Addtoy")
     // const notify = () => toast("Added successfull!");
     const handleSubmit = event =>{
         event.preventDefault();
@@ -34,6 +36,7 @@ const AddToy = () => {
                 'success'
               )
         }
+        form.reset()
        })
     }
     return (

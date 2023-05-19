@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
 import { FcGoogle } from "react-icons/fc";
 import {useNavigate, useLocation} from 'react-router-dom'
+import { useTitle } from '../Hooks/useTitle';
 
 const Login = () => {
+    useTitle('login')
     const [user, setUser] = useState('')
     const [sucess, setSuccess] = useState('')
 

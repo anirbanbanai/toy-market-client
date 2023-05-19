@@ -2,8 +2,10 @@ import {useLoaderData} from 'react-router-dom'
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
+import { useTitle } from '../Hooks/useTitle';
 
 const Update = () => {
+    useTitle("Update")
     const datta = useLoaderData();
     console.log(datta)
     const handleSubmit = event =>{
@@ -36,6 +38,7 @@ const Update = () => {
                 'success'
               )
          }
+         form.reset()
         })
     }
     return (

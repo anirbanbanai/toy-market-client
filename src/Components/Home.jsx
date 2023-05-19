@@ -1,7 +1,9 @@
+import { useTitle } from "../Hooks/useTitle";
 import BannerSection from "./BannerSection";
 import GallarySection from "./GallarySection";
 
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <BannerSection></BannerSection>

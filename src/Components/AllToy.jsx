@@ -1,7 +1,9 @@
 import {useLoaderData} from 'react-router-dom'
 import SubAllToy from './SubAllToy';
+import { useTitle } from '../Hooks/useTitle';
 
 const AllToy = () => {
+    useTitle('Alltoy')
     const alltoy = useLoaderData();
     console.log(alltoy)
     return (

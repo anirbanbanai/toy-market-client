@@ -72,6 +72,12 @@ const AddToy = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
+                        <span className="label-text">Avilable Quantity</span>
+                    </label>
+                    <input type="text" required name="quantity" placeholder="Quantity" className="input input-bordered" />
+                </div>
+                <div className="form-control">
+                    <label className="label">
                         <span className="label-text">Photo_Url</span>
                     </label>
                     <input type="text" name="photo" placeholder="photo_url"  required className="input input-bordered" />

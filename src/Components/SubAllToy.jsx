@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 
 const SubAllToy = ({ main }) => {
-    const { _id, name, img, category, price, rating, } = main;
+    const { _id, name, img, category, price, rating } = main;
     return (
         <div className="w-[100%] text-center border-2 border-red-500 m-2 rounded-lg ">
             <p className="text-2xl font-semibold">{name}</p>

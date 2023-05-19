@@ -1,6 +1,7 @@
 import { BsStarFill } from "react-icons/bs";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
+import {Link} from 'react-router-dom'
 
 const MySubToy = ({main, setData, datas}) => {
     const {_id, category, img, price, rating,  } = main;
@@ -49,7 +50,7 @@ const MySubToy = ({main, setData, datas}) => {
             <h1 className="flex gap-1 items-center"><BsStarFill className="text-yellow-400"/> <BsStarFill className="text-yellow-400"/><BsStarFill className="text-yellow-400"/><BsStarFill className="text-yellow-400"/> {rating}</h1>
            
            
-            <button className="btn btn-warning">Edit</button>
+            <Link to={`/update/${_id}`} className="btn btn-warning">Edit</Link>
             <button onClick={ ()=>handleDelete(_id) } className="btn bg-white hover:bg-white"><RiDeleteBin6Fill  className="text-black  text-2xl"/> </button>
         </div>
         </div>

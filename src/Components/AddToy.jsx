@@ -1,8 +1,9 @@
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
-    const notify = () => toast("Added successfull!");
+    // const notify = () => toast("Added successfull!");
     const handleSubmit = event =>{
         event.preventDefault();
        
@@ -23,13 +24,17 @@ const AddToy = () => {
             },
             body:JSON.stringify(all)
         })
-        .then(result=>{
-            const user = result.user;
-            console.log(user)
-        })
-        .catch((error=>{
-            console.log(error.message)
-        }))
+        .then(res=>res.json())
+       .then(data =>{
+        console.log(data)
+        if(data){
+            Swal.fire(
+                'Added!',
+                'Your file has been Added.',
+                'success'
+              )
+        }
+       })
     }
     return (
         <form onSubmit={handleSubmit} className="p-4">
@@ -74,8 +79,8 @@ const AddToy = () => {
 
             </div>
             <div className=" flex justify-center">
-                <input onClick={notify} className="btn  btn-warning w-3/4 " type="submit" value="Add Toy" />
-                <ToastContainer />
+                <input  className="btn  btn-warning w-3/4 " type="submit" value="Add Toy" />
+                {/* <ToastContainer /> */}
             </div>
         </form >
     );

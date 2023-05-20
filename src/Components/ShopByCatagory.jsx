@@ -104,7 +104,7 @@ const ShopByCatagory = () => {
     const [regular, setRegular] = useState([])
     const [truck, setTruck] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/Sports_Cars`)
+        fetch(`https://assign11-server.vercel.app/toy/Sports_Cars`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -112,7 +112,7 @@ const ShopByCatagory = () => {
             })
     }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/Polish_Cars`)
+        fetch(`https://assign11-server.vercel.app/toy/Polish_Cars`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -120,7 +120,7 @@ const ShopByCatagory = () => {
             })
     }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/Regular_Cars`)
+        fetch(`https://assign11-server.vercel.app/toy/Regular_Cars`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -128,7 +128,7 @@ const ShopByCatagory = () => {
             })
     }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/Truck`)
+        fetch(`https://assign11-server.vercel.app/toy/Truck`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -156,6 +156,7 @@ const ShopByCatagory = () => {
                             sport.map(m => <div className='bg-slate-50 m-3 p-4 rounded-xl' key={m._id}>
                                 <p className='text-xl m-3'>{m.name}</p>
                                 <img className='w-3/4 mx-auto rounded-lg' src={m.img} alt="" />
+                                
                             </div>)
                         }
                        </div>

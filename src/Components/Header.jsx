@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import { AuthContext } from './ProviderRouter';
 const Header = () => {
     const {user, logOut} = useContext(AuthContext)
@@ -13,11 +13,11 @@ const Header = () => {
                 <h2 className="text-5xl font-black"><span className='text-red-600'>World</span> of <span className='text-blue-600'>Toy</span> Car</h2>
             </div>
             <div className='grid md:flex'> 
-                <Link className='text-2xl mr-3 font-bold bg-slate-100 hover:bg-red-400 p-2 rounded-lg' to='/'>Home</Link>
-                <Link className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/alltoy'>AllToy</Link>
-                <Link className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/mytoy'>MyToy</Link>
-                <Link className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/addtoy'>AddToy</Link>
-                <Link className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/blog'>Blogs</Link>
+                <NavLink className='text-2xl mr-3 font-bold bg-slate-100 hover:bg-red-400 p-2 rounded-lg' to='/'>Home</NavLink>
+                <NavLink className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/alltoy'>AllToy</NavLink>
+                <NavLink className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/mytoy'>MyToy</NavLink>
+                <NavLink className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/addtoy'>AddToy</NavLink>
+                <NavLink className='text-2xl mr-3 bg-slate-100 font-bold hover:bg-red-400 p-2 rounded-lg' to='/blog'>Blogs</NavLink>
             </div>
             <div>
                 {!user && <Link className='btn btn-warning mt-5 md:mt-0' to='/login'>Login</Link>}

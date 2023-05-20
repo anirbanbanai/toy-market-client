@@ -21,8 +21,8 @@ const Update = () => {
         const all = {name, catagory,rating, sub_catagory, img, price};
         console.log(all)
 
-        fetch(`http://localhost:5000/toy/${datta._id}`,{
-            method:"PUT",
+        fetch(`https://assign11-server.vercel.app/toy/${datta._id}`,{
+            method:"PATCH",
             headers:{
                 'content-type':'application/json'
             },
@@ -68,7 +68,7 @@ const Update = () => {
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" required name="price" defaultValue={'$' + datta?.price} placeholder="$price" className="input input-bordered" />
+                    <input type="text" required name="price"  placeholder="$price" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">

@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         element: <PrivetRoute>
           <ShowDetails></ShowDetails>
         </PrivetRoute>,
-        loader: ({ params }) => fetch(`https://assign11-server.vercel.app/toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://assign11-server.vercel.app/toy/h/${params.id}`)
       },
       {
         path: '/mytoy',
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
       {
         path:"/update/:id",
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+        loader:({params})=>fetch(`https://assign11-server.vercel.app/toy/h/${params.id}`)
       }
     ]
   },

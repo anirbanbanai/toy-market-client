@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SubGallary from "./SubGallary";
 import { Link } from 'react-router-dom'
 
+
 const GallarySection = () => {
     const [data, setData] = useState([])
     useEffect(() => {

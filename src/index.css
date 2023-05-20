@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#tt{
+   display: flex;
+   justify-content: center;
+   font-size: larger;
+   font-weight: 700;
+   gap: 122px;
+}

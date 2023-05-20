@@ -9,3 +9,13 @@
    font-weight: 700;
    gap: 122px;
 }
+
+@media screen and (max-width: 768px) {
+     #tt{
+        padding: 20px;
+  
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }

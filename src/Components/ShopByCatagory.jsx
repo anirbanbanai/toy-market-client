@@ -136,7 +136,9 @@ const ShopByCatagory = () => {
             })
     }, [])
     return (
-        <div className='m-10'>
+        <div className='m-10 bg-pink-400'>
+            <h3 className='text-4xl text-center mb-5'>Short by Catagory</h3>
+            
             <Tabs defaultIndex={1} onSelect={(index) => console.log(index)}>
                 <TabList id='tt'>
                     <Tab ><button>Sport Car</button></Tab>
@@ -149,9 +151,9 @@ const ShopByCatagory = () => {
 
                 <div className=' w-3/4 mx-auto text-center mt-5 mb-5'>
                     <TabPanel>
-                       <div className='grid md:grid-cols-2'>
+                       <div className='grid md:grid-cols-2 '>
                        {
-                            sport.map(m => <div className='' key={m._id}>
+                            sport.map(m => <div className='bg-slate-50 m-3 p-4 rounded-xl' key={m._id}>
                                 <p className='text-xl m-3'>{m.name}</p>
                                 <img className='w-3/4 mx-auto rounded-lg' src={m.img} alt="" />
                             </div>)
@@ -161,7 +163,7 @@ const ShopByCatagory = () => {
                     <TabPanel>
                     <div className='grid md:grid-cols-2'>
                        {
-                            polish.map(m => <div className='' key={m._id}>
+                            polish.map(m => <div className='bg-slate-50 m-3 p-4 rounded-xl' key={m._id}>
                                 <p className='text-xl m-3'>{m.name}</p>
                                 <img className='w-3/4 mx-auto rounded-lg' src={m.img} alt="" />
                             </div>)
@@ -171,7 +173,7 @@ const ShopByCatagory = () => {
                     <TabPanel>
                     <div className='grid md:grid-cols-2'>
                        {
-                            regular.map(m => <div className='' key={m._id}>
+                            regular.map(m => <div className='bg-slate-50 m-3 p-4 rounded-xl' key={m._id}>
                                 <p className='text-xl m-3'>{m.name}</p>
                                 <img className='w-3/4 mx-auto rounded-lg' src={m.img} alt="" />
                             </div>)
@@ -181,7 +183,7 @@ const ShopByCatagory = () => {
                     <TabPanel>
                     <div className='grid md:grid-cols-2'>
                        {
-                            truck.map(m => <div className='' key={m._id}>
+                            truck.map(m => <div className='bg-slate-50 m-3 p-4 rounded-xl' key={m._id}>
                                 <p className='text-xl m-3'>{m.name}</p>
                                 <img className='w-3/4 mx-auto rounded-lg' src={m.img} alt="" />
                             </div>)

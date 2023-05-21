@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import SubGallary from "./SubGallary";
 import { Link } from 'react-router-dom'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const GallarySection = () => {
     const [data, setData] = useState([])
@@ -13,12 +14,16 @@ const GallarySection = () => {
                 setData(data);
             })
     }, [])
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, [data]);
     // console.log(data)
     return (
         <div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {
-                    data?.map(m => <SubGallary key={m._id} main={m}>
+                    data?.slice(0,20).map(m => <SubGallary key={m._id} main={m}>
 
                     </SubGallary>)
                 }

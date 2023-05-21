@@ -1,4 +1,5 @@
 import { useTitle } from "../Hooks/useTitle";
+import AboutMe from "./AboutMe";
 import BannerSection from "./BannerSection";
 import ExtraOne from "./ExtraOne";
 import GallarySection from "./GallarySection";
@@ -13,6 +14,7 @@ const Home = () => {
             <GallarySection></GallarySection>
             <ShopByCatagory></ShopByCatagory>
             <ExtraOne></ExtraOne>
+            <AboutMe></AboutMe>
         </div>
     );
 };

@@ -24,10 +24,11 @@ const ExtraOne = () => {
             <div className="border-2 m-3 p-3" key={m._id}>
                 <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000">
+                data-aos-duration="1000">
                     
             <img className="w-2/4 mx-auto " src={m.img} alt="" />
             </div>
+            
             </div>
         ))
     }

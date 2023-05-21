@@ -18,6 +18,7 @@ import MyToy from './Components/MyToy';
 import PrivetRoute from './Components/PrivetRoute';
 import Update from './Components/Update';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
         element: <AllToy></AllToy>,
         loader: () => fetch(`https://assign11-server.vercel.app/toy`)
       },
+     
       {
         path: "/blog",
         element: <Blog></Blog>

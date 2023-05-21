@@ -9,11 +9,11 @@ const GallarySection = () => {
         fetch(`https://assign11-server.vercel.app/toy`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setData(data);
             })
     }, [])
-    console.log(data)
+    // console.log(data)
     return (
         <div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

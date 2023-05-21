@@ -15,7 +15,7 @@ const MyToy = () => {
     const [activeTab, setActiveTab] = useState('All')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/g/${user?.email}/${activeTab}`)
+        fetch(`https://assign11-server.vercel.app/toy/g/${user?.email}/${activeTab}`)
             .then(res => res.json())
             .then(data => {
                 setData(data)

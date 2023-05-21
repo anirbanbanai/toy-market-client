@@ -83,7 +83,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
-                            <h3>New User? <Link to='/regi'>Register</Link></h3>
+                            <h3>Already have an accunt ? <Link to='/regi'>Register</Link></h3>
                         </form>
                     </div>
                 </div>

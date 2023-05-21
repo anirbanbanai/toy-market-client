@@ -12,7 +12,7 @@ const ProviderRouter = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     const createUser = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password)
+        return createUserWithEmailAndPassword(auth, email, password )
     }
 
     const loginUser = (email, password) => {
